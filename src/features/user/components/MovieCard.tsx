@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { IMAGE_BASE_URL } from "../../../core/utils/constants/api-constants";
 
 interface Movie {
@@ -12,10 +13,14 @@ interface Movie {
   }
   
   const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+    const navigate = useNavigate(); 
     const posterUrl = `${IMAGE_BASE_URL}${movie.poster_path}`;
-  
+
+    const handleClick = () => {
+      navigate(`/movie/${movie.id}`);
+    };
     return (
-        <div className="rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
+        <div onClick={handleClick} className="rounded-lg overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer">
           <div className="relative">
             <img 
               src={posterUrl}

@@ -1,9 +1,9 @@
-import { AiOutlineHome } from 'react-icons/ai';
 import { BiCategory } from 'react-icons/bi';
 import { FiSearch } from 'react-icons/fi';
 import { GrFavorite } from 'react-icons/gr';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { LuTvMinimalPlay } from 'react-icons/lu';
+import { TfiVideoCamera } from 'react-icons/tfi';
 
 
 const Sidebar = () => {
@@ -17,11 +17,12 @@ const Sidebar = () => {
         <button className="p-2 rounded-lg hover:bg-[#353942] hover:text-white transition-colors">
           <FiSearch className="h-6 w-6" />
         </button>
-        <button className="p-2 rounded-lg bg-[#353942] text-white">
-          <AiOutlineHome className="h-6 w-6" />
-        </button>
+        
         <button className="p-2 rounded-lg hover:bg-[#353942] hover:text-white transition-colors">
           <BiCategory className="h-6 w-6" />
+        </button>
+        <button className="p-2 rounded-lg bg-[#353942] text-white">
+          <TfiVideoCamera  className="h-6 w-6" />
         </button>
         <button className="p-2 rounded-lg hover:bg-[#353942] hover:text-white transition-colors">
           <GrFavorite className="h-6 w-6" />
